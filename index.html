@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- nombre de la etiqueta de la pagina -->
+  <title>javascript-youtube</title>
+  <!-- enlace a estilos css3 -->
+  <link rel="stylesheet" href="estilos.css">
+  <!-- conexion de javascript con el html -->
+  <script src="pruebas.js"></script>
+
+</head>
+
+<body>
+  <!-- titulo -->
+  <h2>JAVASCRIPT</h2>
+  <!-- Ejemplo de javascript output -->
+  <fieldset>
+    <h1 class="titulos">Ejemplo de javascript: output</h1>
+    <!-- Ejemplo usando document.getElementById(id).innerHTML -->
+    <div class="output">
+      <p>texto de salida usando: <b>document.getElementById("id").innerHTML</b> <br> sumatoria de dos numeros 6+6 el resultado es arrojado por javascript</p>
+      <p id="demo"></p>
+      <script>
+        document.getElementById("demo").innerHTML = 6 + 6;
+      </script>
+    <!-- texto de salida usando document.write -->
+      <p>texto de salida usando <b>document.write</b> <br>sumatoria de dos numeros 5+6 el resultado es arrojado por javascript</p>
+      <script>
+        document.write(5+6);
+      </script>
+     <!-- Ejemplo usando boton para ver el resultado     -->
+      <p>Ejemplo usando boton para ver el resultado de 5+6 se borra el html:</p>
+      <button class="botones1" type="button" onclick="document.write(5 + 6)">oprima el boton para ver el resultado</button>
+      <p>el <b>document.write</b> solo debe usarse para hacer pruebas</p>
+    <!-- Ejemplo utilizando console.log   -->
+      <p>Ejemplo utilizando console.log(5+6); el resultado se visualiza en la consola oprime <b>f12</b></p>
+      <script>
+         console.log(5 + 6);
+      </script>
+    </div>
+  </fieldset><br><br>
+  <!-- Ejemplo JavaScript Statements -->
+  <fieldset>
+    <h1>Ejemplo JavaScript Statements</h1>
+    <div class="Statements">
+      <p>declaraciones en javascript<br><br>
+        let x, y, z;  // Statement 1<br>
+        x = 5;        // Statement 2<br>
+        y = 6;        // Statement 3<br>
+        z = x + y;    // Statement 4
+      </p>
+      <p id="demo2"></p>
+      <script>
+      let x, y, z;  // Statement 1
+      x = 5;        // Statement 2
+      y = 6;        // Statement 3
+      z = x + y;    // Statement 4
+      document.getElementById("demo2").innerHTML ="cual es el resultado de z = " + z + ".";
+      </script>
+    <!-- javascript codigo en bloque   -->
+      <p style="color:gray">javascript codigo en bloque</p>
+      <button class="botones2" type="button" onclick="respuestas()">Dale Click</button>
+      <p id="demo1"></p>
+      <p id="demo3"></p>
+      <p id="demo4"></p>
+
+      <script>
+        function respuestas() {
+          document.getElementById("demo1").innerHTML = "hola julieta"
+          document.getElementById("demo3").innerHTML = "como estas"
+          document.getElementById("demo4").innerHTML = "te amo mucho bb hermosa"
+        }
+      </script>
+    </div>
+  </fieldset><br><br>
+  <!-- Ejemplo JavaScript Objects -->
+  <fieldset>
+    <h1>Ejemplo javascript Objects</h1>
+    <div class="Objects">
+      <p id="demo5"></p>
+      <h3 style="color:olive">!!concatenando con funcion!!</h3>
+      <p id="demo6"></p>
+      <script>
+        // crear un objeto
+        const persona = {firstName:"angelo", LastName:"lopez", age:37, eyeColor:"cafes oscuros", fullName: function() {
+    return this.firstName + " " + this.LastName;}};
+        // mostrar en pantalla el objeto
+        document.getElementById("demo5").innerHTML = persona.firstName+" "+ persona.LastName+ " " + "tiene" +" "+ persona.age+ " " + "años " + "edad";
+        document.getElementById("demo6").innerHTML = persona.fullName();
+      </script>
+    </div>
+  </fieldset><br><br>
+  <!-- Ejemplo de eventos -->
+  <fieldset>
+    <h1>Ejemplo de eventos</h1>
+    <div class="events">
+      <button class="botones3" onclick="document.getElementById('demo7').innerHTML=Date()">quieres saber la hora dale click</button>
+      <p id="demo7"></p>
+      <h3>Ejemplo de evento usando this.innerHTML</h3>
+      <button class="botones4" onclick="this.innerHTML=Date()">la hora dentro del boton</button>
+    </div>
+  </fieldset><br><br>
+  <!-- Ejemplo de matrizes -->
+  <fieldset>
+    <h1>Ejemplo de matrizes</h1>
+    <div>
+      <p id="demo8"></p>
+      <p id="demo9"></p>
+      <p id="demo10"></p>
+      <p id="demo11"></p>
+      <p id="demo12"></p>
+      <p id="demo13"></p>
+      <p id="demo14"></p>
+
+      <script>
+        const carros = ["dodge", "mazda", "chevrolet"];
+        document.getElementById("demo8").innerHTML = carros;
+        const carros2 = [];
+        carros2 [0] = "camaro";
+        carros2 [1] = "corsa";
+        carros2 [2] = "gt";
+        document.getElementById("demo9").innerHTML = carros2;
+        const carros3 = ["honda", "akt", "pulsar"];
+        document.getElementById("demo10").innerHTML = carros3 [0];
+        const carros4 = ["honda", "akt", "pulsar"];
+        carros4[0] = "yamaha";
+        document.getElementById("demo11").innerHTML = carros4;
+        const persona2 = {primerNombre:"angelo", apellido:"lopez", edad:37};
+        document.getElementById("demo12").innerHTML = persona2.primerNombre;
+        const frutas = ["banano", "mango", "papaya"];
+        document.getElementById("demo13").innerHTML = frutas.length;
+        document.getElementById("demo14").innerHTML = frutas [2];
+      </script>
+    </div>
+  </fieldset><br><br>
+  <!-- Ejemplo de matrizes usando Array sort -->
+  <fieldset>
+      <h1>Ejemplo de matrizes usando Array sort() y reverse()</h1>
+      <div>
+        <p style="color: blue">!!!!!El metodo <b>sort()</b> ordena la matrizes alfabeticamente:</p>
+        <p id="demo15"></p>
+        <p id="demo16"></p>
+        <p style="color: blue">!!!!!El metodo <b>reverse()</b> ordena detras para adelante:</p>
+        <p id="demo17"></p>
+        <p id="demo18"></p>
+
+        <script>
+          const frutas2 =["Banano", "Naranja", "Manzana", "Aguacate", "Mango"];
+          document.getElementById("demo15").innerHTML = frutas2;
+          frutas2.sort();
+          document.getElementById("demo16").innerHTML = frutas2;
+          const numeros = [5, 4, 3, 2, 1, 0];
+          document.getElementById("demo17").innerHTML = numeros;
+
+          numeros.reverse();
+          document.getElementById("demo18").innerHTML = numeros;
+        </script>
+      </div>
+  </fieldset><br><br>
+  <!-- Ejemplo de iteracion de matrizes -->
+  <fieldset>
+    <h1>Ejemplo de iteracion de matrizes b.forEach() .map()</h1>
+    <div>
+      <p style="color: blue">iteracion de elementos de una matriz con el metodo  <b>.forEach()</b></p>
+      <p id="demo19"></p>
+      <p style="color: blue">iteracion de elementos de una matriz multiplicando x2 con el metodo  <b>.map()</b></p>
+      <p id="demo20"></p>
+      <script>
+        const numeros2 = [45, 4, 9, 16, 25];
+        let txt = "";
+        numeros2.forEach(myFunction);
+        document.getElementById("demo19").innerHTML = txt;
+        function miFunction(value){txt +=value + "<br>";}
+        const numeros3 =[2, 4, 6, 8, 10];
+        const numeros4 = numeros3.map(myFunction);
+        document.getElementById("demo20").innerHTML = numeros4;
+        function myFunction(index) { return index*2; }
+      </script>
+    </div>
+  </fieldset><br><br>
+  <!-- Ejemplo de date -->
+  <fieldset>
+    <h1>Ejemplo de date</h1>
+    <div>
+      <p id="demo21"></p>
+      <p id="demo22"></p>
+      <p id="demo23"></p>
+      <script>
+        const d = new Date();
+        document.getElementById("demo21").innerHTML = d;
+        const a = new Date("2004");
+        document.getElementById("demo22").innerHTML = a;
+        const b = new Date();
+        document.getElementById("demo23").innerHTML = b.getFullYear();
+      </script>
+    </div>
+  </fieldset><br><br>
+  <!-- Ejemplo de math Object -->
+  <fieldset>
+    <h1>Ejemplo de math object</h1>
+    <p style="color: blue">resultado de <b>pi</b> :</p>
+    <p id="demo24"></p>
+    <p style="color:blue">redondeando con <b>Math.round(4.6)</b> es igual:</p>
+    <p id="demo25"></p>
+    <p style="color: blue">devuelve el valor 4.4 redondeando el entero mas proximo con <b>Math.ceil(4.4)</b>;es igual:</p>
+    <p id="demo26"></p>
+    <p style="color:blue">devuelve el valor 4.7 redondeando hacia abajo a su entero mas cercano con <b>Math.Floor(4.7)</b>: es igual:</p>
+    <p id="demo27"></p>
+    <P style="color:blue">devuelve la parte entera de 4.7 con <b>Math.trunc(4.7)</b>; es igual:</P>
+    <p id="demo28"></p>
+    <p style="color:blue">devuelve si 4 es negativo, nulo o positivo con <b>Math.sign(x)</b>;es igual:</p>
+    <p id="demo29"></p>
+    <p style="color:blue">devuelve el valor de 8 a la potencia de 2 con <b>Math.pow(8,2)</b>; es igual:</p>
+    <p id="demo30"></p>
+    <p style="color:blue">devuelve el valor de la raiz cuadrada de 64 con <b>Math.sqrt(64)</b>; es igual:</p>
+    <p id="demo31"></p>
+    <p style="color:blue">devuelve el valor absoluto de -4.7 con <b>Math.abs(-4.7)</b>; es igual:</p>
+    <p id="demo32"></p>
+    <p style="color:blue">devuelve el valor minimo de 0, 150, 30, 20, -8, -200 con <b>Math.min(0, 150, 30, 20, -8, -200)</b>; es igual:</p>
+    <p id="demo33"></p>
+    <p style="color:blue">devuelve el valor maximo de 0, 150, 30, 20, -8, -200 con <b>Math.max(0, 150, 30, 20, -8, -200)</b>; es igual:</p>
+    <p id="demo34"></p>
+    <p style="color:blue">devuelve un número aleatorio entre 0 (inclusive) y 1 (exclusivo) con <b>Math.random()</b>; es igual:</p>
+    <p id="demo35"></p>
+
+    <script>
+      document.getElementById("demo24").innerHTML = Math.PI;
+      document.getElementById("demo25").innerHTML = Math.round(4.6);
+      document.getElementById("demo26").innerHTML = Math.ceil(4.4);
+      document.getElementById("demo27").innerHTML = Math.floor(4.7);
+      document.getElementById("demo28").innerHTML = Math.trunc(4.7);
+      document.getElementById("demo29").innerHTML = Math.sign(4);
+      document.getElementById("demo30").innerHTML = Math.pow(8,2);
+      document.getElementById("demo31").innerHTML = Math.sqrt(64);
+      document.getElementById("demo32").innerHTML = Math.abs(-4.7);
+      document.getElementById("demo33").innerHTML = Math.min(0, 150, 30, 20, -8, -200);
+      document.getElementById("demo34").innerHTML = Math.max(0, 150, 30, 20, -8, -200);
+      document.getElementById("demo35").innerHTML = Math.random();
+    </script>
+  </fieldset><br><br>
+    <!-- Ejemplo de Math.random(); -->
+  <fieldset>
+      <h1>Ejemplo de Math.random();</h1>
+      <div>
+        <p style="color:blue">devuelve un número aleatorio entre 0 (inclusive) y 1 (exclusivo) con <b>Math.random()</b>; es igual:</p>
+        <p id="demo36"></p>
+        <p style="color:blue">Ejemplo de <b>Math.random() con Math.floor()</b>; es igual:</p>
+        <p id="demo37"></p>
+
+        <script>
+        document.getElementById("demo36").innerHTML = Math.random();
+        document.getElementById("demo37").innerHTML = Math.floor(Math.random()*10);
+        </script>
+      </div>
+  </fieldset><br><br>
+  <!-- Ejemplo de booleanos -->
+  <fieldset>
+    <h1>Ejemplo de booleans</h1>
+    <div>
+      <p style="color: blue">Ejemplo de un <b>booleano (10>9)</b>; es igual a</p>
+      <p id="demo38"></p>
+      <p style="color: blue">Ingrese su edad para saber si te mandas solo</p>
+      <input id="edad" value="">
+      <button class="botones5" onclick="boleanos()">!!!!dale click aqui averigualo?????</button>
+      <p id="demo39"></p>
+
+      <script>
+        document.getElementById("demo38").innerHTML = Boolean(10>9);
+
+        function boleanos(){
+          let edad =
+          document.getElementById("edad").value;
+          let voteable = (edad < 18) ? "no puedes tienes que hacer caso a tus papas y portarte muy juicioso o si no te castigaran sin celular por un muyyy largo tiempo jajaja XD":"si ya puedes pero tienes que trabajar para comprar tu comida tu ropa, arriendo y servicios tambien lavar tu ropita jajajaja XD";
+          document.getElementById("demo39").innerHTML = voteable + "";
+        }
+
+      </script>
+    </div>
+  </fieldset><br><br>
+  <fieldset>
+    <h1>Ejemplo de switch</h1>
+    <p style="color:blue">Ejemplo de <b>switch</b> para averiguar que dia es hoy</p>
+    <p id="demo40"></p>
+    <script>
+      let day;
+      switch (new Date().getDay()) {
+        case 0:
+          day = "sunday";
+          break;
+        case 1:
+          day = "monday";
+          break;
+        case 2:
+          day = "tuesday";
+          break;
+        case 3:
+          day = "wednesday";
+          break;
+        case 4:
+          day = "thursday";
+          break;
+        case 5:
+          day = "friday";
+          break;
+        case 6:
+          day = "saturday";
+          break;
+      }
+      document.getElementById("demo40").innerHTML = "el dia de hoy en ingles = " + day;
+    </script>
+  </fieldset><br><br>
+  <!-- Ejemplo de bucle for -->
+  <fieldset>
+    <h1>Ejemplo bucle for</h1>
+    <p style="color:blue">Ejemplo de <b>buble for</b> con un contador:</p>
+    <p id="demo41"></p>
+    <script>
+      let contador ="";
+      for (let a = 0; a <5; a++){
+        contador += "la cuenta es :" + a + "<br>";
+      }
+      document.getElementById("demo41").innerHTML = contador;
+    </script>
+  </fieldset><br><br>
+  <!-- Ejemplo bucle for in -->
+  <fieldset>
+    <h1>Ejemplo bucle for in</h1>
+    <p style="color:blue">Ejemplo usando un <b>for in:</b> const stop = {animal:"perro", color:"negro", tamaño:"grande"};</p>
+    <p id="demo42"></p>
+    <script>
+      const stop = {animal:"perro", color:"negro", tamaño:"grande"};
+      let texto= "";
+      for (let x in stop) {
+        texto += stop[x] + " ";
+      }
+      document.getElementById("demo42").innerHTML = texto;
+    </script>
+  </fieldset><br><br>
+  <!-- Ejemplo de for of -->
+  <fieldset>
+    <h1>Ejemplo de for of</h1>
+    <p style="color:blue">Ejemplo de <b>for of</b> deletreando la palabra javascript</p>
+    <p id="demo43"></p>
+    <script>
+      let lenguaje_de_programacion = "JAVASCRIPT"
+      let text="";
+      for (let x of lenguaje_de_programacion){
+        text += x + "<br>";
+      }
+      document.getElementById("demo43").innerHTML = text;
+    </script>
+  </fieldset><br><br>
+  <!-- Ejemplo de while -->
+  <fieldset>
+    <h1>Ejemplo de while</h1>
+    <p style="color:blue">Ejemplo de <b>while</b> con un contador contandodesde 0 hasta 10 :</p>
+    <p id="demo44"></p>
+    <script>
+      let cajita_de_numeros ="";
+      let c =0;
+      while (c <=10) {
+        cajita_de_numeros += "<br> contador numero :"+ c; c++;
+      }
+      document.getElementById("demo44").innerHTML = cajita_de_numeros;
+    </script>
+  </fieldset><br><br>
+  <!-- Ejemplo de tipos de conversion -->
+  <fieldset>
+    <h1>Ejemplo de tipos de conversion</h1>
+    <p style="color:blue">Ejemplo de <b>conversion de cadena</b> "50" y "250" a numeros para hacer una operacion matematica de suma: </p>
+    <p id="demo45"></p>
+    <p id="demo46"></p>
+    <p style="color:blue">Ejemplo de <b>conversion de numero</b> 50 y 250 a texto para hacer una concatenacion: </p>
+    <p id="demo47"></p>
+    <p id="demo48"></p>
+
+    <script>
+      let numero1 = "50";
+      let numero2 = "250";
+      let operacion = Number(numero1) + Number(numero2);
+
+      document.getElementById("demo45").innerHTML = operacion;
+      document.getElementById("demo46").innerHTML =  typeof operacion;
+
+      let numero3 = 50;
+      let numero4 = 250;
+      let concatenacion = String(numero3) +" + "+ String(numero4);
+
+      document.getElementById("demo47").innerHTML = concatenacion;
+      document.getElementById("demo48").innerHTML = typeof concatenacion;
+    </script><br><br>
+    <!-- Ejemplo de (Bitwise) bit a bit  -->
+    <fieldset>
+      <h1>Ejemplo de (Bitwise) bit a bit</h1>
+      <p style="color:green">Ejemplo de operadores <b>bit a bit</b> con el numero 6</p>
+      <p style="color:blue">operador 6 & 1:</p>
+      <p id="demo49"></p>
+      <p style="color:blue">operador 6 | 1:</p>
+      <p id="demo50"></p>
+      <p style="color:blue">operador 6 ^ 1:</p>
+      <p id="demo51"></p>
+      <p style="color:blue">operador ~ 6:</p>
+      <p id="demo52"></p>
+      <p style="color:blue">operador 6 << 1:</p>
+      <p id="demo53"></p>
+      <p style="color:blue">operador 6 >> 1:</p>
+      <p id="demo54"></p>
+      <p style="color:blue">operador 6 >>> 1:</p>
+      <p id="demo55"></p>
+      <script>
+        document.getElementById("demo49").innerHTML = 6 & 1;
+        document.getElementById("demo50").innerHTML = 6 | 1;
+        document.getElementById("demo51").innerHTML = 6 ^ 1;
+        document.getElementById("demo52").innerHTML = ~ 6;
+        document.getElementById("demo53").innerHTML = 6 << 1;
+        document.getElementById("demo54").innerHTML = 6 >> 1;
+        document.getElementById("demo55").innerHTML = 6 >>> 1;
+      </script>
+    </fieldset><br><br>
+    <!-- Ejemplo de RegExp "expresiones regulares de javascript"           -->
+    <fieldset>
+      <h1>Ejemplo de RegExp "expresiones regulares de javascript" </h1>
+      <p style="color: blue">expresiones regulares con <b>.search()</b> Ejemplo buscado la palabra gamerclub dentro la caja de texto let texto2 = "visita mi pagina gamerclub" me da como resultado que esta en la posicion:</p>
+      <p id="demo56"></p>
+      <p style="color:blue">Ejemplo expresiones regulares con <b>.replace()</b> vamos a remplazar la palabra gamerclub por la palabra clubchampions :</p>
+      <button class="botones6" onclick="expresiones()">Dale click para cambiar la palabra</button>
+      <p id="demo57">por favor visita nuestro gamerclub</p>
+      <script>
+        let texto2 = "visita mi pagina gamerclub";
+        let l = texto2.search("gamerclub");
+        document.getElementById("demo56").innerHTML = l;
+        function expresiones(){
+          let texto3 = document.getElementById("demo57").innerHTML;
+          document.getElementById("demo57").innerHTML = texto3.replace("gamerclub","clubchampions");
+        }
+      </script>
+    </fieldset><br><br>
+    <!-- Ejemplo de errores -->
+    <fieldset>
+      <h1>Ejemplo de errores en javascript</h1>
+      <p style="color:blue">Ejemplo de error <b>try</b>, <b>catch</b>, <b>finally</b>:</p>
+      <p>ingresa un numero igual a 5 o mayor que 5 que no pase o sea igual 10</p>
+      <input id="demo58" type="text">
+      <button class="botones7" type="button" onclick="errores()" >prueba numeros con errores</button>
+      <p id="p01"></p>
+      <script>
+          function errores() {
+            const mensage = document.getElementById("p01");
+            mensage.innerHTML = "";
+            let x = document.getElementById("demo58").value;
+            try {
+              if (x == "") throw "no a ingresado ningun numero";
+              if (isNaN (x)) throw "eso no es un numero";
+              x = Number(x);
+              if (x > 10) throw "el numero ingresado es mayor que 10";
+              if (x < 5) throw "el numero ingresado es menor que 5";
+
+            } catch (err) {
+                mensage.innerHTML = "error" +" " + err;
+            } finally {
+                document.getElementById("demo58").value = "";
+            }
+          }
+      </script>
+    </fieldset><br><br>
+    <!-- Ejemplo de This Keyword -->
+    <fieldset>
+      <h1>Ejemplo de This Keyword</h1>
+      <span style="color:blue"> Ejemplo utilizando la palabra clave <b>this</b> : </span>
+      <p id="demo59"></p>
+      <script>
+        //creamos un objeto
+        const persona3 = {primerNombre2: "ignacio", apellido2: "castañeda", identificacion: 72256452,
+          NombreCompleto : function Nombre() {
+        return this.primerNombre2 + " " + this.apellido2 + " " + this.identificacion;}};
+        //muestra los datos en pantalla de los objetos
+        document.getElementById("demo59").innerHTML = persona3.NombreCompleto();
+      </script>
+    </fieldset><br><br>
+    <!-- Ejemplo de funcion flecha = Arrow Function -->
+    <fieldset>
+      <h1>Ejemplo de Function Arrow = función flecha</h1>
+      <span style="color:blue">Ejemplo usando la funcion flecha : <b>=></b> que nos sirve para una sintaxis mas corta de codigo: <br> <b style="color:green">let codigoflecha = (a,b) => a * b; <br>document.getElementById("demo60").innerHTML = codigoflecha(4,5);</b></span>
+      <p id="demo60"></p>
+      <span style="color:blue">Ejemplo 2: <br><b style="color:green">let codigoflecha = (a,b) => a * b;</b><br> <b style="color:green">document.getElementById("demo60").innerHTML = codigoflecha(4,5);</b> <br> <b style="color:green">var hello;</b> <br><b style="color:green">hello = () => {
+      </b><br> <b style="color:green">return "Hello World"</b>
+      <br> <b style="color:green">}</b><br> <b style="color:green">document.getElementById("demo61").innerHTML = hello();</b> </span>
+      <p id="demo61"></p>
+      <script>
+        let codigoflecha = (a,b) => a * b;
+        document.getElementById("demo60").innerHTML = codigoflecha(4,5);
+        var hello;
+        hello = () => {
+          return "Hello World"
+        }
+        document.getElementById("demo61").innerHTML = hello();
+      </script>
+    </fieldset><br><br>
+    <!-- Ejemplo de Classes -->
+    <fieldset>
+      <h1>Ejemplo de Classes</h1>
+      <span style="color:blue">El uso de <b>Class</b> en javascript:</span>
+      <p id="demo62"></p>
+      <span style="color:blue">Ejemplo usando <b>class</b> con methodos:</span>
+      <p id="demo63"></p>
+      <script>
+        class automoviles {
+          constructor(marca,modelo) {
+            this.marca = marca;
+            this.modelo = modelo;
+          }
+        }
+        const mycar = new automoviles("mazda","2021");
+        document.getElementById("demo62").innerHTML = mycar.marca + " " + mycar.modelo;
+        //Ejemplo clases con metodos
+        class automoviles2 {
+          constructor (marca, modelo) {
+            this.marca = marca;
+            this.modelo = modelo;
+
+        }
+        viejo() {
+          let date = new Date();
+          return date.getFullYear() - this.modelo;
+         }
+       }
+       let myautomovil = new automoviles2("ford",2014);
+       document.getElementById("demo63").innerHTML = "mi carro tiene" + " " + myautomovil.viejo() + " "+  "años de viejo";
+      </script>
+    </fieldset><br><br>
+    <!-- Ejemplo de JSON -->
+    <fieldset>
+      <h1>Ejemplo de JSON</h1>
+      <span style="color:blue">Ejemplo de <b>JSON</b>:</span>
+      <p id="demo64"></p>
+      <script>
+      let text1 = '{"employees":[' +
+        '{"firstName":"John","lastName":"Doe" },' +
+        '{"firstName":"Anna","lastName":"Smith" },' +
+        '{"firstName":"Peter","lastName":"Jones" }]}';
+
+        const obj = JSON.parse(text1);
+        document.getElementById("demo64").innerHTML =
+        obj.employees[2].firstName + " " + obj.employees[2].lastName;
+      </script>
+    </fieldset><br><br>
+    <!-- Ejemplo de clases herencia -->
+    <fieldset>
+      <h1>Ejemplo de clases herencia</h1>
+      <span style="color:blue">Ejemplo de clases de herencia con marcacas de celulares y modelos</span>
+      <p id="demo65"></p>
+      <script>
+        class Telefono {
+          constructor (marca){
+            this.marca = marca;
+          }
+          anuncio(){
+            return "ha llegado el nuevo telefono de" + " " + this.marca;
+          }
+        }
+        class Modelo extends Telefono {
+          constructor (marca, modelo) {
+            super(marca);
+            this.modelo = modelo;
+          }
+          anuncioCompleto() {
+            return this.anuncio() + " el modelo" + " " + this.modelo;
+          }
+        }
+        let miTelefono = new Modelo ("xioami","redmi30!!");
+        document.getElementById("demo65").innerHTML = miTelefono.anuncioCompleto();
+      </script>
+    </fieldset><br><br>
+    <!-- Ejemplo de metodos estáticos(static) -->
+    <fieldset>
+      <h1>Ejemplo de metodos estáticos(static)</h1>
+      <span style="color:blue">Ejemplo metodos estáticos <b>(static)</b>  utilizando la area y base de un retangulo :</span>
+      <p id="demo66"></p>
+      <p id="demo67"></p>
+    </fieldset><br><br>
+    <!-- Ejemplo de callback -->
+    <fieldset>
+      <h1>Ejemplo de callback</h1>
+      <span style="color:blue">por favor espera 4 segundos quiero decirte algo</span>
+      <p id="demo68"></p>
+    </fieldset><br><br>
+    <!-- Ejemplo de setInterval() -->
+    <fieldset>
+      <h1>Ejemplo de setInterval()</h1>
+      <span style="color:blue">Usando setInterval() para mostrar el tiempo cada segundo (1000 milisegundos) :</span>
+      <p style="color:red" id="demo69"></p>
+    </fieldset><br><br>
+    <!-- Ejemplo de promise en javascript   -->
+    <fieldset>
+      <h1>Ejemplo de promise en javascript</h1>
+      <span style="color:blue">Ejemplo de promesa usando <b>myResolve(result, value)</b> y <b>myReject(Error, object):</b> </span>
+      <span style="color:green">NOTA si cambiamos el valor de la varible x que es igual= 0 cambiara el resultado.</span>
+      <p id="demo70"></p>
+    </fieldset>
+</body>
+</html>

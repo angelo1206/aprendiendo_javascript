@@ -1,0 +1,61 @@
+b{
+  color: red;
+}
+.botones1{
+  background: red;
+  color: white;
+}
+.botones2{
+  background: white;
+  border: 2px solid;
+  color: red;
+}
+.botones3 {
+  background: blue;
+  color: white;
+  width: 120px;
+}
+.botones4{
+  background: green;
+  color: blue;
+  border-radius: 10px;
+}
+.botones5{
+  background: black;
+  color: white;
+  border-radius: 20px;
+}
+.botones6{
+  background: orange;
+  color: blue;
+  border-radius: 30px;
+}
+.botones7{
+  background: blue;
+  color: yellow;
+  border-radius: 30px;
+}
+h2{
+  text-align: center;
+  background: aquamarine;
+  border-radius: 20px;
+}
+h1{
+  border-radius: 50px;
+  text-align: center;
+  background: yellow;
+}
+.output {
+  text-align: left;
+  font-size: 20px;
+  color: blue;
+}
+.Statements{
+  text-align: left;
+  font-size: 20px;
+  color: blue;
+}
+.events{
+  text-align: left;
+
+}
